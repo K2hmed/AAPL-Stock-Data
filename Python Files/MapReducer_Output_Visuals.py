@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -22,9 +19,6 @@ plt.legend()
 plt.show()
 
 
-# In[2]:
-
-
 # Load yearly average data
 yearly_avg = pd.read_csv('yearly_avg_price.csv', delimiter='\t', names=['year', 'avg_close'])
 yearly_avg['year'] = yearly_avg['year'].astype(int)
@@ -37,9 +31,6 @@ plt.ylabel('Average Closing Price (USD)')
 plt.title('Yearly Average Closing Price of AAPL')
 plt.grid(True)
 plt.show()
-
-
-# In[3]:
 
 
 # Load the preprocessed data
@@ -55,20 +46,9 @@ plt.title('Volume vs. Daily Price Change (%)')
 plt.grid(False)
 plt.show()
 
-
-# In[17]:
-
-
 print(preprocessed_data.columns)
 
-
-# In[23]:
-
-
 print(split_analysis.columns)
-
-
-# In[31]:
 
 
 # Make an explicit copy of the original DataFrame slice to avoid SettingWithCopyWarning
@@ -98,10 +78,6 @@ splits_per_year.plot(kind='bar', figsize=(12, 6), color='orange', title='Signifi
 plt.xlabel('Year')
 plt.ylabel('Count of Significant Splits')
 plt.show()
-
-
-# In[ ]:
-
 
 
 
